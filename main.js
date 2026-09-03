@@ -1,4 +1,4 @@
-const numeroSenha = document.querySelector(".parametro-senha__texto")
+   const numeroSenha = document.querySelector(".parametro-senha__texto")
 const campoSenha = document.querySelector('#campo-senha')
 
 campoSenha.value = 'la senha.'
@@ -26,4 +26,20 @@ botoes[1].onclick = aumentar
     numeroSenha.textContent = tamanhoSenha;
 
     }
+
+geraSenha()
+
+function geraSenha(){
+    let senha = ''
+    // lOOP - Repetições
+    for (let i = 0; i < tamanhoSenha; i++) {
+        let numeroAleatorio = Math.random() * 26;
+        numeroAleatorio = Math.floor(numeroAleatorio)
+        senha = senha + letrasMaiusculas[numeroAleatorio]
+    }
+        campoSenha.value = senha;
+}
+   
+
+
 
